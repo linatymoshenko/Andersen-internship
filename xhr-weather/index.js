@@ -30,5 +30,5 @@ function sendRequest(country = "Ukraine") {
 
 sendRequest().then((response) => {
   let c;
-  ////openweathermap.org/themes/openweathermap/assets/vendor/owm/img/widgets/03n.png
+  //openweathermap.org/themes/openweathermap/assets/vendor/owm/img/widgets/03n.png
 });
