@@ -14,6 +14,7 @@ p, button {
 }
 
 div.weather-info {
+    height: 314px;
     margin: 68px 52px;
     padding: 0 25px;
     border: solid #030303 3px;
@@ -24,6 +25,10 @@ div.weather-info {
 
 div.location {
     text-align: center;
+}
+
+div.expected {
+    padding: 1px 0 37px 0;
 }
 
 image {
@@ -38,7 +43,7 @@ form {
 input {
     margin-left: 26px;
     width: 497px;
-    height: 25px;
+    height: 24px;
     border: solid black 3px;
     border-radius: 6px;
     box-shadow: 0 0 1px #000000c7, inset 0 0 1px #000000c7;
@@ -48,7 +53,6 @@ button {
     font-weight: 700;
     width: 137px;
     height: 35px;
-    padding: 6px;
     margin-left: 34px;
     background: linear-gradient(to top, #0ddbab, #0ff5bf);
     border: solid white 2px;

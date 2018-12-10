@@ -3,25 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <title>Title</title>
-  <script src="index.js"></script>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <div>
-    <form name="search" action="#" method="get">
-      <input type="text" name="search-field"><button type="submit">Поиск</button>
-    </form>
+    <div>
+      <input id="search-country" type="text">
+      <button onclick="getWeatherForCountry()">Поиск</button>
+    </div>
   </div>
   <div class="weather-info">
     <div class="location">
-      <p>Вы находитесь в </p>
+      <p>Вы находитесь в "<span id="country"></span>"</p>
     </div>
     <div class="expected">
-      <p>Сегодня вас ожидает:</p>
+      <p>Сегодня вас ожидает: <span id="image-block"></span></p>
     </div>
     <div class="temperature">
-      <p>Температура сегодня:</p>
+      <p>Температура сегодня: <span id="temperature"></span> ºC</p>
     </div>
   </div>
+  <script src="index.js"></script>
 </body>
 </html>
