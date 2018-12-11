@@ -30,6 +30,6 @@ function getWeatherForCountry() {
       imageBlock.appendChild(weatherImage);
     })
     .catch(error => {
-        alert(error);
-      });
+      alert(error);
+    });
 }
