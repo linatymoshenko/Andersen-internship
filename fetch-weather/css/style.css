@@ -1,0 +1,85 @@
+body {
+    width: 777px;
+    height: 603px;
+    border: solid black 2px;
+    margin: 0;
+}
+
+p, button {
+    font-family: "Open Sans";
+    font-weight: 400;
+    font-size: 20px;
+    font-style: normal;
+    color: #333333;
+}
+
+.weather-info {
+    height: 314px;
+    margin: 68px 52px;
+    padding: 0 25px;
+    border: solid #030303 3px;
+    border-radius: 6px;
+    box-shadow: 0 0 15px darkgrey, inset 0 0 15px darkgrey,
+                0 0 3px #000000c7, inset 0 0 3px #000000c7;
+}
+
+.location {
+    text-align: center;
+}
+
+.expected {
+    padding: 1px 0 37px 0;
+    height: 99px;
+}
+
+.expected .title {
+    float: left;
+    margin-top: 25px;
+    font-family: "Open Sans";
+    font-weight: 400;
+    font-size: 20px;
+    font-style: normal;
+    color: #333333;
+}
+
+.expected #image-block {
+    float: right;
+    margin-right: 70px;
+}
+
+.button-wrapper {
+    float: right;
+    padding: 0 25px 0 0;
+    margin-top: -1px;
+}
+
+.form {
+    margin: 25px 26px;
+}
+
+input {
+    margin-left: 26px;
+    width: 497px;
+    height: 24px;
+    border: solid black 3px;
+    border-radius: 6px;
+    box-shadow: 0 0 1px #000000c7, inset 0 0 1px #000000c7;
+}
+
+button {
+    font-weight: 700;
+    width: 137px;
+    height: 35px;
+    margin-left: 34px;
+    background: linear-gradient(to top, #0ddbab, #0ff5bf);
+    border: solid white 2px;
+    border-radius: 7px;
+    padding: 0px 7px 0 0;
+}
+
+@media only screen and (max-width: 777px) {
+    body {
+        background-color: lightblue;
+    }
+}
+
