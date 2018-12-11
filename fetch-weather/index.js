@@ -12,7 +12,7 @@ function sendRequest(country = DEFAULT_COUNTRY) {
 }
 
 function getWeatherForCountry() {
-  let country = document.getElementById("search-country").value;
+  let country = document.getElementsByClassName("search-country")[0].value;
 
   sendRequest(country)
     .then(({main: {temp}, weather: [{icon, description}]}) => {
