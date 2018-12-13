@@ -14,7 +14,7 @@ let object = {
   className: "open menu my menu menu"
 };
 
-// removeClass(object, "open");
-removeClass(object, "men");
+removeClass(object, "open");
+removeClass(object, "menu");
 
 console.log( object.className );

@@ -1,6 +1,5 @@
 let array = [5, 2, 1, -10, 8];
 
-// отсортируйте?
-array.sort((a, b) => b - a);
+array.sort((firstNumber, secondNumber) => secondNumber - firstNumber);
 
-alert(array); // 8, 5, 2, 1, -10
+console.log(array);
