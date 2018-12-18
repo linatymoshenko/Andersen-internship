@@ -10,14 +10,15 @@ const handle = app.getRequestHandler();
 
 app.prepare().then(() => {
   createServer((request, response) => {
-    const parsedUrl = parse(request.url, true);
+    const { method, url } = request;
+    const parsedUrl = parse(url, true);
     const {pathname, query} = parsedUrl;
 
-    if (pathname === "/api/city/random") {
+    if (pathname === "/api/city/random" && method === "GET") {
       db.getCity((error, row) => {
         response.end(row.name)
       });
-    } else if (pathname === "/api/city/add") {
+    } else if (pathname === "/api/city/add" && method === "POST") {
       request.on("error", (error) => {
         console.error(error);
       }).on("data", (chunk) => {
