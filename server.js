@@ -9,29 +9,29 @@ const app = next({dev});
 const handle = app.getRequestHandler();
 
 app.prepare().then(() => {
-  createServer((req, res) => {
-    const parsedUrl = parse(req.url, true);
+  createServer((request, response) => {
+    const parsedUrl = parse(request.url, true);
     const {pathname, query} = parsedUrl;
 
     if (pathname === "/api/city/random") {
-      db.getCity((err, row) => {
-        res.end(row.name)
+      db.getCity((error, row) => {
+        response.end(row.name)
       });
     } else if (pathname === "/api/city/add") {
-      req.on("error", (err) => {
-        console.error(err);
+      request.on("error", (error) => {
+        console.error(error);
       }).on("data", (chunk) => {
         let jsonString = chunk.toString();
         let body = JSON.parse(jsonString);
         db.setCity(body.name);
       });
 
-      res.end("succes");
+      response.end("succes");
     } else {
-      handle(req, res, parsedUrl)
+      handle(request, response, parsedUrl)
     }
-  }).listen(3000, err => {
-    if (err) throw err;
+  }).listen(3000, error => {
+    if (error) throw error;
     console.log("> Ready on http://localhost:3000")
   })
 });
