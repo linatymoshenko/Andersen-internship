@@ -8,4 +8,5 @@ let strings = ["кришна", "кришна", "харе", "харе",
   "харе", "харе", "кришна", "кришна", "8-()"
 ];
 
-console.log( unique(strings) ); // кришна, харе, 8-()
+console.log( unique(strings) );
+console.log( Array.from(new Set(strings)) );

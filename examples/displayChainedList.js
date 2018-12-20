@@ -12,10 +12,12 @@ let list = {
   }
 };
 
-function printList(list) {
+function printList(originalList) {
+  let list = originalList;
   do {
     console.log(list.value);
-  } while (list = list.next);
+    list = list.next;
+  } while (list);
 }
 
 function printListRecursion(list) {
@@ -34,14 +36,16 @@ function printReverseListRecursion(list) {
   console.log(list.value);
 }
 
-function printReverseList(list) {
+function printReverseList(originalList) {
+  let list = originalList;
   let array = [];
 
   do {
     array.unshift(list.value);
-  } while (list = list.next);
+    list = list.next;
+  } while (list);
 
-  array.forEach((element) => console.log(element));
+  console.log(array);
 
 }
 
