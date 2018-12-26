@@ -4,7 +4,7 @@ import './App.css';
 
 import {connectWs, addWsListener, removeWsListener} from "./utils/ws";
 
-const {emit} = connectWs('ws://192.168.110.49:3000');
+const {emit} = connectWs('ws://localhost:3000');
 
 addWsListener("connected_new_user", (data) => {
   console.log(data);
