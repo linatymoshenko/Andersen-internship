@@ -5,21 +5,35 @@ import './App.css';
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {value: ''};
+    this.state = {
+      firstName: "",
+      lastName: "",
+      age: 0
+    };
 
-    this.handleChange = this.handleChange.bind(this);
+    this.handleChangeFirstName = this.handleChangeFirstName.bind(this);
+    this.handleChangeLastName = this.handleChangeLastName.bind(this);
+    this.handleChangeAge = this.handleChangeAge.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleChange(event) {
-    this.setState({value: event.target.value});
+  handleChangeFirstName(event) {
+    this.setState({ firstName: event.target.value });
+
+  }
+  handleChangeLastName(event) {
+    this.setState({ lastName: event.target.value });
+  }
+
+  handleChangeAge(event) {
+    this.setState({ age: event.target.value });
   }
 
   handleSubmit(event) {
-    alert('A name was submitted: ' + this.state.value);
+    alert(`A user was submitted: ${this.state.firstName} ${this.state.lastName}, ${this.state.age} years old.`);
     event.preventDefault();
   }
-  
+
   render() {
     return (
       <div className="App">
@@ -38,9 +52,17 @@ class App extends Component {
           </a>
           <form onSubmit={this.handleSubmit}>
             <label>
-              Name:
-              <input type="text" value={this.state.value} onChange={this.handleChange} />
+              First Name:
             </label>
+            <input type="text" value={this.state.firstName} onChange={this.handleChangeFirstName} />
+            <label>
+              Last Name:
+            </label>
+            <input type="text" value={this.state.lastName} onChange={this.handleChangeLastName} />
+            <label>
+              Age:
+            </label>
+            <input type="number" min="0" value={this.state.age} onChange={this.handleChangeAge} />
             <input type="submit" value="Submit" />
           </form>
         </header>
