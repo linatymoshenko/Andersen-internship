@@ -8,8 +8,4 @@ function logger(namespace) {
   }
 }
 
-// var info = logger('INFO:')
-// info('this is an info message')
-// // INFO: this is an info message
-
 module.exports = logger;

@@ -6,7 +6,5 @@ function duckCount() {
   });
   return ducks.length;
 }
-// var notDuck = Object.create({quack: true})
-// var duck = {quack: true}
-// duckCount(duck, notDuck) // 1
+
 module.exports = duckCount;

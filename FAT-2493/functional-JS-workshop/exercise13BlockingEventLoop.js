@@ -3,11 +3,8 @@ function repeat(callback, iterationAmount) {
     return
   }
 
-  callback()
+  callback();
 
-  // release control every 10 or so
-  // iterations.
-  // 10 is arbitrary.
   if (iterationAmount % 10 === 0) {
     setTimeout(function() {
       repeat(callback, --iterationAmount)
