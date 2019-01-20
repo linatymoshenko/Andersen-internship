@@ -1,0 +1,13 @@
+.button-wrapper,
+.clear-button {
+    height: 60px;
+    width: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    background-color: #add8e6;
+    color: #000000;
+    flex: 1;
+    outline: 1px solid #282c34;
+}
